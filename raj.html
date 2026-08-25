@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid & Nanny Service</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #e8f1ff, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .hero-img {
+            width: 380px;
+            height: 300px;
+            background: #dbeafe;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            font-size: 34px;
+            color: #172554;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #2563eb;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .booking {
+            background: white;
+        }
+
+        form {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0 18px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-img {
+                width: 300px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MaidCare</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <h1>Trusted Maid & Nanny Services</h1>
+
+        <p>
+            Find reliable and professional maids and nannies
+            for your home. Easy booking, verified workers and
+            quality services.
+        </p>
+
+        <button class="btn" onclick="scrollToBooking()">
+            Book a Service
+        </button>
+    </div>
+
+    <div class="hero-img">
+        👩‍🍼
+    </div>
+
+</section>
+
+
+<!-- Services -->
+<section id="services">
+
+    <div class="title">
+        <h2>Our Services</h2>
+        <p>Choose the service according to your requirement</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">🧹</div>
+            <h3>House Maid</h3>
+            <p>
+                Professional maid services for cleaning,
+                cooking and daily household work.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👶</div>
+            <h3>Nanny Service</h3>
+            <p>
+                Trusted nanny services for taking care
+                of children in a safe environment.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🍳</div>
+            <h3>Cook Service</h3>
+            <p>
+                Hire experienced cooks for daily meals
+                and special occasions.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Booking -->
+<section class="booking" id="booking">
+
+    <div class="title">
+        <h2>Book a Service</h2>
+        <p>Fill the form and we will contact you</p>
+    </div>
+
+    <form id="bookingForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name"
+               placeholder="Enter your name" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" id="phone"
+               placeholder="Enter mobile number" required>
+
+        <label>Select Service</label>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="House Maid">House Maid</option>
+            <option value="Nanny">Nanny Service</option>
+            <option value="Cook">Cook Service</option>
+        </select>
+
+        <label>Service Duration</label>
+
+        <select id="duration" required>
+            <option value="">Select Duration</option>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+        </select>
+
+        <label>Address</label>
+
+        <textarea id="address"
+                  placeholder="Enter your address"
+                  required></textarea>
+
+        <button class="btn" type="submit">
+            Submit Booking
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- Contact -->
+<section id="contact">
+
+    <div class="title">
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="card">
+        <h3>MaidCare Service</h3>
+        <p>📞 +91 9876543210</p>
+        <p>📧 support@maidcare.com</p>
+        <p>📍 Your City, India</p>
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 MaidCare. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+    function scrollToBooking() {
+        document.getElementById("booking")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+    }
+
+
+    document.getElementById("bookingForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let service = document.getElementById("service").value;
+
+            alert(
+                "Thank you " + name +
+                "! Your " + service +
+                " booking has been submitted successfully."
+            );
+
+            this.reset();
+        });
+
+</script>
+
+</body>
+</html>
